@@ -1,18 +1,16 @@
-import React, { useState } from 'react';
+import { Container } from '@material-ui/core';
+import React from 'react';
 import { hot } from 'react-hot-loader';
+import Counter from './Counter';
+import Header from './Header';
 
 const App = () => {
-  const [count, setCount] = useState(0);
-
-  const increment = () => {
-    setCount(count + 1);
-  };
-
   return (
     <div>
-      <p>Hello, World!</p>
-      <button onClick={increment}>+</button>
-      {count}
+      <Header />
+      <Container>
+        <Counter />
+      </Container>
     </div>
   );
 };
